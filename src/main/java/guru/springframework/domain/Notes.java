@@ -2,9 +2,7 @@ package guru.springframework.domain;
 
 import javax.persistence.*;
 
-/**
- * Created by jt on 6/13/17.
- */
+
 @Entity
 public class Notes {
 
@@ -15,7 +13,7 @@ public class Notes {
     @OneToOne
     private Recipe recipe;
 
-    @Lob
+    @Lob // more then 255 characters
     private String recipeNotes;
 
     public Long getId() {
